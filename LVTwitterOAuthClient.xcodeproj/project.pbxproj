@@ -12,7 +12,6 @@
 		D7EDAD1D183C1012009AE69C /* LVTwitterOAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDAD1C183C1012009AE69C /* LVTwitterOAuthClient.m */; };
 		D7EDAD24183C1012009AE69C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EDAD23183C1012009AE69C /* XCTest.framework */; };
 		D7EDAD25183C1012009AE69C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EDAD15183C1012009AE69C /* Foundation.framework */; };
-		D7EDAD27183C1012009AE69C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EDAD26183C1012009AE69C /* UIKit.framework */; };
 		D7EDAD2A183C1012009AE69C /* libLVTwitterOAuthClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EDAD12183C1012009AE69C /* libLVTwitterOAuthClient.a */; };
 		D7EDAD30183C1012009AE69C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7EDAD2E183C1012009AE69C /* InfoPlist.strings */; };
 		D7EDAD32183C1012009AE69C /* LVTwitterOAuthClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EDAD31183C1012009AE69C /* LVTwitterOAuthClientTests.m */; };
@@ -49,7 +48,6 @@
 		D7EDAD1C183C1012009AE69C /* LVTwitterOAuthClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LVTwitterOAuthClient.m; sourceTree = "<group>"; };
 		D7EDAD22183C1012009AE69C /* LVTwitterOAuthClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LVTwitterOAuthClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7EDAD23183C1012009AE69C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D7EDAD26183C1012009AE69C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D7EDAD2D183C1012009AE69C /* LVTwitterOAuthClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LVTwitterOAuthClientTests-Info.plist"; sourceTree = "<group>"; };
 		D7EDAD2F183C1012009AE69C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D7EDAD31183C1012009AE69C /* LVTwitterOAuthClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LVTwitterOAuthClientTests.m; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 			files = (
 				D7EDAD2A183C1012009AE69C /* libLVTwitterOAuthClient.a in Frameworks */,
 				D7EDAD24183C1012009AE69C /* XCTest.framework in Frameworks */,
-				D7EDAD27183C1012009AE69C /* UIKit.framework in Frameworks */,
 				D7EDAD25183C1012009AE69C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,7 +99,6 @@
 			children = (
 				D7EDAD15183C1012009AE69C /* Foundation.framework */,
 				D7EDAD23183C1012009AE69C /* XCTest.framework */,
-				D7EDAD26183C1012009AE69C /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
