@@ -87,7 +87,6 @@ NSString * const kOAuthTokenSecretKey = @"oauth_token_secret";
     [self _step1WithCompletion:^(NSData *data, NSError *error) {
         
         if (error) {
-            [self printStringData:data];
             handler(nil,nil,error);
             return;
         }
@@ -101,10 +100,8 @@ NSString * const kOAuthTokenSecretKey = @"oauth_token_secret";
         [self _step2WithAccount:account signature:signedReverseAuthSignature andHandler:^(NSData *data, NSError *error) {
             
             if (error) {
-                [self printStringData:data];
                 handler(nil,nil,error);
             }
-            [self printStringData:data];
             NSDictionary *parsedResponse = [self parseOAuthData:data];
             if (parsedResponse[kOAuthAccessTokenKey] && parsedResponse[kOAuthTokenSecretKey]) {
                 
@@ -140,7 +137,7 @@ NSString * const kOAuthTokenSecretKey = @"oauth_token_secret";
     NSParameterAssert(signedReverseAuthSignature);
     
     NSDictionary *params = @{
-                             TW_X_AUTH_REVERSE_TARGET: kTwitterConsumerKey,
+                             TW_X_AUTH_REVERSE_TARGET: _consumerKey,
                              TW_X_AUTH_REVERSE_PARMS: signedReverseAuthSignature
                              };
     
@@ -202,9 +199,5 @@ NSString * const kOAuthTokenSecretKey = @"oauth_token_secret";
     [_queue cancelAllOperations];
 }
 
-- (void)printStringData:(NSData *)data
-{
-    DDLogVerbose(@"Error data: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-}
 
 @end
