@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 	s.name 			=  	'LVTwitterOAuthClient'
-	s.version		= 	'1.0.0'
+	s.version		= 	'0.0.1'
 	s.summary		=	'Super simple oAuth Client for the Twitter API'
 	s.author		=	{ 'Martin Fernandez' => 'martin@loovin.com' }
 	s.license		=	'MIT'		
