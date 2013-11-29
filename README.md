@@ -4,7 +4,7 @@ LVTwitterOAuthClient is a super simple client for performing Twitter's reverse a
 
 ## Usage
 
-Initialize an `LVTwitterOAuthClient` with this initializer:
+Initialise an `LVTwitterOAuthClient` with this initialiser:
 
 ```objective-c
 LVTwitterOAuthClient * client = [[LVTwitterOAuthClient alloc] 
@@ -12,7 +12,7 @@ LVTwitterOAuthClient * client = [[LVTwitterOAuthClient alloc]
 									  andConsumerSecret:@"YourConsumerSecret"];
 ```
 
-Retrieving the tokens do this:
+For retrieving the tokens do this:
 ```objective-c
     [client requestTokensForAccount:account withHandler:^(NSString *oAuthAccessToken, 
     													  NSString *oAuthTokenSecret, 
@@ -55,9 +55,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
-
-
-
-
