@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
 	s.license		=	{ :type => 'MIT', :file => 'LICENSE' }
 
-	s.source		= 	{ :git => 'https://bilby91@bitbucket.org/bilby91/lvtwitteroauthclient.git', :tag => '0.0.1' }
+	s.source		= 	{ :git => 'https://github.com/loovin/LVTwitterOAuthClient', :tag => '0.0.1' }
 
 	s.dependency		'OAuthCore'
 	s.platform		= 	:ios, '7.0'
