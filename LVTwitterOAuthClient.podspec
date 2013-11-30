@@ -5,11 +5,11 @@ Pod::Spec.new do |s|
 	s.summary		=	'Super simple oAuth Client for the Twitter API'
 	s.author		=	{ 'Martin Fernandez' => 'martin@loovin.com' }
 			
-	s.homepage		= 	'https://bitbucket.org/bilby91/lvtwitteroauthclient/overview'
+	s.homepage		= 	'https://github.com/loovin/LVTwitterOAuthClient'
 
 	s.license		=	{ :type => 'MIT', :file => 'LICENSE' }
 
-	s.source		= 	{ :git => 'https://github.com/loovin/LVTwitterOAuthClient', :tag => '0.0.1' }
+	s.source		= 	{ :git => 'https://github.com/loovin/LVTwitterOAuthClient.git', :tag => '0.0.1' }
 
 	s.dependency		'OAuthCore'
 	s.platform		= 	:ios, '7.0'
