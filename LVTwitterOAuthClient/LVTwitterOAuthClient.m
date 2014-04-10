@@ -177,9 +177,9 @@ typedef void(^TWOAuthHandler)(NSData *data, NSError *error);
 		    if (key && value) {
 			    [parsedOAuthData setObject:value forKey:key];
 		    }
-
-		    return [parsedOAuthData copy];
 	    }
+
+	    return [parsedOAuthData copy];
     }
     @catch(NSException *) {
         return nil;
