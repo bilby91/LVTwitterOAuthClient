@@ -9,7 +9,6 @@
 
 @class ACAccount;
 
-
 /**
  *  The handler called when requestTokensForAccount:withHandler: is finished.
  *
@@ -18,18 +17,24 @@
  *  @param error            A pointer to an error to be set in the event that the operation could not be completed successfully.
  *
  */
+typedef void(^TWOAuthResponseHandler)(NSString *oAuthAccessToken, NSString *oAuthTokenSecret, NSError *error) __deprecated;
 
-typedef void(^TWOAuthResponseHandler)(NSString * oAuthAccessToken, NSString *oAuthTokenSecret, NSError *error);
+/**
+ *  The block called when requestTokensForAccount:completionBlock: is finished.
+ *
+ *  @param oAuthResponse    The serialized response from Twitter or nil.
+ *  @param error            A pointer to an error set in the event that the operation couldn't be completed successfully.
+ */
+typedef void (^LVOAuthResponseBlock)(NSDictionary *oAuthResponse, NSError *error);
 
-typedef enum LVTwitterOAuthClientErrorCode {
-    
+typedef NS_ENUM(NSUInteger , LVTwitterOAuthClientErrorCode) {
     LVTwitterOAuthClientErrorAuthorizationFailed = 1,
     LVTwitterOAuthClientErrorGeneric
-    
-} LVTwitterOAuthClientErrorCode;
+};
 
-extern NSString * const LVTwitterOAuthClientDomain;
-
+FOUNDATION_EXTERN NSString * const LVTwitterOAuthClientDomain;
+FOUNDATION_EXTERN NSString * const kLVOAuthAccessTokenKey;
+FOUNDATION_EXTERN NSString * const kLVOAuthTokenSecretKey;
 
 /**
  *  The `LVTwitterOAuthClient` class is one that communicates with twitter API and gets the Access Token & Token Secret. It's very simple to use,
@@ -45,20 +50,28 @@ extern NSString * const LVTwitterOAuthClientDomain;
  *
  *  @return An initialised instance.
  */
-- (id) initWithConsumerKey:(NSString *)consumerKey andConsumerSecret:(NSString *)consumerSecret;
+- (id)initWithConsumerKey:(NSString *)consumerKey andConsumerSecret:(NSString *)consumerSecret;
 
 /**
  *  Performs reverse auth and retrieves the Access Token & Token Secret.
+ *  @note This method is deprecated. Please use -[requestTokensForAccount:withCompletionBlock:] instead.
  *
  *  @param account The ACAccount of the user that needs the tokens.
  *  @param handler The handler that is going to be called after the operation is done.
  */
+- (void)requestTokensForAccount:(ACAccount *)account withHandler:(TWOAuthResponseHandler)handler __deprecated;
 
-- (void)requestTokensForAccount:(ACAccount *)account withHandler:(TWOAuthResponseHandler)handler;
+/**
+ *  Performs reverse auth and retrieves the Access Token & Token Secret.
+ *
+ *  @param account          The ACAccount of the user that needs the tokens.
+ *  @param completionBlock  The completionBlock that is going to be called after the operation is done.
+ */
+- (void)requestTokensForAccount:(ACAccount *)account completionBlock:(LVOAuthResponseBlock)completionBlock;
 
 /**
  *  Cancels all requests that are at the moment on the internal queue.
  */
-
 - (void)cancelAllRequests;
+
 @end
