@@ -32,9 +32,9 @@ typedef NS_ENUM(NSUInteger , LVTwitterOAuthClientErrorCode) {
     LVTwitterOAuthClientErrorGeneric
 };
 
-FOUNDATION_EXTERN NSString * const LVTwitterOAuthClientDomain;
 FOUNDATION_EXTERN NSString * const kLVOAuthAccessTokenKey;
 FOUNDATION_EXTERN NSString * const kLVOAuthTokenSecretKey;
+FOUNDATION_EXTERN NSString * const LVTwitterOAuthClientDomain;
 
 /**
  *  The `LVTwitterOAuthClient` class is one that communicates with twitter API and gets the Access Token & Token Secret. It's very simple to use,

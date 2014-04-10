@@ -21,9 +21,9 @@
 
 #define REQUEST_TIMEOUT_INTERVAL 15
 
-NSString * const LVTwitterOAuthClientDomain = @"com.loovin.twitterOAuthClient";
-NSString * const kLVOAuthAccessTokenKey = @"oauth_access_token";
+NSString * const kLVOAuthAccessTokenKey = @"oauth_token";
 NSString * const kLVOAuthTokenSecretKey = @"oauth_token_secret";
+NSString * const LVTwitterOAuthClientDomain = @"com.loovin.twitterOAuthClient";
 
 @class ACAccount;
 
@@ -167,12 +167,19 @@ typedef void(^TWOAuthHandler)(NSData *data, NSError *error);
     @try {
         NSString *response  = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         NSArray  *tmp       = [response componentsSeparatedByString:@"&"];
-        NSString *token     = [[[tmp objectAtIndex:0] componentsSeparatedByString:@"="] lastObject];
-        NSString *secret    = [[[tmp objectAtIndex:1] componentsSeparatedByString:@"="] lastObject];
+	    NSMutableDictionary *parsedOAuthData = [NSMutableDictionary dictionaryWithCapacity:tmp.count];
 
-	    return @{
-			    kLVOAuthAccessTokenKey : token,
-			    kLVOAuthTokenSecretKey : secret};
+	    for (NSString *parameter in tmp) {
+		    NSArray *parameterComponents = [parameter componentsSeparatedByString:@"="];
+		    NSString *value = [parameterComponents lastObject];
+		    NSString *key = [parameterComponents firstObject];
+
+		    if (key && value) {
+			    [parsedOAuthData setObject:value forKey:key];
+		    }
+
+		    return [parsedOAuthData copy];
+	    }
     }
     @catch(NSException *) {
         return nil;
