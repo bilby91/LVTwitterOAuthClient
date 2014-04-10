@@ -39,6 +39,8 @@ typedef void(^TWOAuthHandler)(NSData *data, NSError *error);
 
 @implementation LVTwitterOAuthClient
 
+#pragma mark - Public APIs -
+
 - (id)init
 {
     self = [super init];
@@ -55,6 +57,7 @@ typedef void(^TWOAuthHandler)(NSData *data, NSError *error);
         _queue          = [[NSOperationQueue alloc] init];
         _consumerKey    = [consumerKey copy];
         _consumerSecret = [consumerSecret copy];
+
     }
     return self;
 }
@@ -103,7 +106,7 @@ typedef void(^TWOAuthHandler)(NSData *data, NSError *error);
 	}];
 }
 
-# pragma mark - Private API
+# pragma mark - Private APIs -
 
 - (void)_step1WithCompletion:(TWOAuthHandler)completion
 {
@@ -133,7 +136,7 @@ typedef void(^TWOAuthHandler)(NSData *data, NSError *error);
                                               parameters:params];
     
     [request setAccount:account];
-    
+
     [NSURLConnection sendAsynchronousRequest:request.preparedURLRequest queue:_queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         completion(data, connectionError);
     }];
