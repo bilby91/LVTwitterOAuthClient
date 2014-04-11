@@ -1,0 +1,20 @@
+PODS:
+  - LVTwitterOAuthClient (0.2.0):
+    - OAuthCore
+  - NSData+Base64 (1.0.0)
+  - OAuthCore (0.0.1):
+    - NSData+Base64
+
+DEPENDENCIES:
+  - LVTwitterOAuthClient (from `../`)
+
+EXTERNAL SOURCES:
+  LVTwitterOAuthClient:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LVTwitterOAuthClient: cfc9c4d60b33f1de5b810ba128d42349f0f01b36
+  NSData+Base64: bd5dacbc799c0339bd6a961a9ea80dd6eba11b33
+  OAuthCore: 946cd0ac34bbb32d79b69e65417568e4b7ee8e9e
+
+COCOAPODS: 0.31.1
