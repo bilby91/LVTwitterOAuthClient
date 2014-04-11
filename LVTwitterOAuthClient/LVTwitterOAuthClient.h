@@ -32,6 +32,8 @@ typedef NS_ENUM(NSUInteger , LVTwitterOAuthClientErrorCode) {
     LVTwitterOAuthClientErrorGeneric
 };
 
+FOUNDATION_EXTERN NSString * const kLVOAuthUserIDKey;
+FOUNDATION_EXTERN NSString * const kLVOAuthScreenNameKey;
 FOUNDATION_EXTERN NSString * const kLVOAuthAccessTokenKey;
 FOUNDATION_EXTERN NSString * const kLVOAuthTokenSecretKey;
 FOUNDATION_EXTERN NSString * const LVTwitterOAuthClientDomain;

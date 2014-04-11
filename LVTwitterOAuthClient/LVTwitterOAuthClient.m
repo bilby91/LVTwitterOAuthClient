@@ -21,6 +21,8 @@
 
 #define REQUEST_TIMEOUT_INTERVAL 15
 
+NSString * const kLVOAuthUserIDKey = @"user_id";
+NSString * const kLVOAuthScreenNameKey = @"screen_name";
 NSString * const kLVOAuthAccessTokenKey = @"oauth_token";
 NSString * const kLVOAuthTokenSecretKey = @"oauth_token_secret";
 NSString * const LVTwitterOAuthClientDomain = @"com.loovin.twitterOAuthClient";
