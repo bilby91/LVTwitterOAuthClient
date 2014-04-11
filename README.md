@@ -1,6 +1,6 @@
 ![LVTwitterOAuthClient logo](http://s3.amazonaws.com/loovin/assets/LVTwitterOAuthClient.png "LVTwitterOAuthClient") 
 
-[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)]() [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClient%2A) [![Cocoapods](https://cocoapod-badges.herokuapp.com/p/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClientw%2A)
+[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)]() [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClient%2A) [![Cocoapods](https://cocoapod-badges.herokuapp.com/p/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClientw%2A)[![Build Status](https://travis-ci.org/loovin/LVTwitterOAuthClient.svg?branch=master)](https://travis-ci.org/loovin/LVTwitterOAuthClient)
 
 **LVTwitterOAuthClient** is a super simple client for performing Twitter's reverse auth and retrieving user's access token, just that.
 
