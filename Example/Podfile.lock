@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LVTwitterOAuthClient: 0767c6bae8158bf23bb4cdb5183a86c7f18fc004
+  LVTwitterOAuthClient: cfc9c4d60b33f1de5b810ba128d42349f0f01b36
   NSData+Base64: bd5dacbc799c0339bd6a961a9ea80dd6eba11b33
   OAuthCore: 946cd0ac34bbb32d79b69e65417568e4b7ee8e9e
 
