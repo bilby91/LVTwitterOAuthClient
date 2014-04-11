@@ -12,11 +12,11 @@ Initialise an `LVTwitterOAuthClient` with this initialiser:
 
 For retrieving the tokens do this:
 
-    [client requestTokensForAccount:account withHandler:^(NSString *oAuthAccessToken, 
-    													  NSString *oAuthTokenSecret, 
-    													  NSError *error) {
-       // Start using twitter api :) 
-    }];
+    [client requestTokensForAccount:twitterAccount completionBlock:^(NSDictionary *oAuthResponse, NSError *error) {  
+		NSString oAuthToken = [oAuthResponse objectForKey: kLVOAuthAccessTokenKey];  
+		NSString oAuthSecret = [oAuthResponse objectForKey: kLVOAuthTokenSecretKey];  
+		// Start using twitter api :)   
+	}]; 
 
 If your are using iOS 6 you need to set the accountType of the account before requesting the tokens, this is a strange behaviour, probably a bug in the SDK.
 
