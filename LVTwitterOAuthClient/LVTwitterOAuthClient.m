@@ -21,10 +21,10 @@
 
 #define REQUEST_TIMEOUT_INTERVAL 15
 
-NSString * const kLVOAuthUserIDKey = @"user_id";
-NSString * const kLVOAuthScreenNameKey = @"screen_name";
-NSString * const kLVOAuthAccessTokenKey = @"oauth_token";
-NSString * const kLVOAuthTokenSecretKey = @"oauth_token_secret";
+NSString * const kLVOAuthUserIDKey          = @"user_id";
+NSString * const kLVOAuthScreenNameKey      = @"screen_name";
+NSString * const kLVOAuthAccessTokenKey     = @"oauth_token";
+NSString * const kLVOAuthTokenSecretKey     = @"oauth_token_secret";
 NSString * const LVTwitterOAuthClientDomain = @"com.loovin.twitterOAuthClient";
 
 @class ACAccount;
@@ -114,9 +114,9 @@ typedef void(^TWOAuthHandler)(NSData *data, NSError *error);
 {
     NSURL *url = [NSURL URLWithString:TW_OAUTH_URL_REQUEST_TOKEN];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
+
     [self prepareAuthorizedRequest:request withURL:url];
-    
+
     [NSURLConnection sendAsynchronousRequest:request queue:_queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         completion(data,connectionError);
     }];
@@ -126,17 +126,17 @@ typedef void(^TWOAuthHandler)(NSData *data, NSError *error);
 {
     NSParameterAssert(account);
     NSParameterAssert(signedReverseAuthSignature);
-    
+
     NSDictionary *params = @{TW_X_AUTH_REVERSE_TARGET: _consumerKey,
                              TW_X_AUTH_REVERSE_PARMS: signedReverseAuthSignature};
-    
+
     NSURL *authTokenURL = [NSURL URLWithString:TW_OAUTH_URL_AUTH_TOKEN];
-    
+
     SLRequest *request =[SLRequest requestForServiceType:SLServiceTypeTwitter
                                            requestMethod:SLRequestMethodPOST
                                                      URL:authTokenURL
                                               parameters:params];
-    
+
     [request setAccount:account];
 
     [NSURLConnection sendAsynchronousRequest:request.preparedURLRequest queue:_queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -147,28 +147,28 @@ typedef void(^TWOAuthHandler)(NSData *data, NSError *error);
 - (void)prepareAuthorizedRequest:(NSMutableURLRequest *)request withURL:(NSURL *)url
 {
     NSDictionary *params = @{ TW_X_AUTH_MODE_KEY: TW_X_AUTH_MODE_REVERSE_AUTH };
-    
+
     NSMutableString *paramsAsString = [[NSMutableString alloc] init];
-    
+
     [params enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         [paramsAsString appendFormat:@"%@=%@&", key, obj];
     }];
-    
+
     NSData *bodyData                = [paramsAsString dataUsingEncoding:NSUTF8StringEncoding];
     NSString *authorizationHeader   = OAuthorizationHeader(url, @"POST", bodyData, _consumerKey, _consumerSecret, nil, nil);
 
     request.HTTPMethod      = @"POST";
     request.HTTPBody        = bodyData;
     request.timeoutInterval = REQUEST_TIMEOUT_INTERVAL;
-    
+
     [request setValue:authorizationHeader forHTTPHeaderField:TW_HTTP_HEADER_AUTHORIZATION];
 }
 
 - (NSDictionary *)parseOAuthData:(NSData *)data
 {
     @try {
-        NSString *response  = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSArray  *tmp       = [response componentsSeparatedByString:@"&"];
+      NSString *response  = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+      NSArray  *tmp       = [response componentsSeparatedByString:@"&"];
 	    NSMutableDictionary *parsedOAuthData = [NSMutableDictionary dictionaryWithCapacity:tmp.count];
 
 	    for (NSString *parameter in tmp) {
