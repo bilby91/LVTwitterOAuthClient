@@ -1,2 +1,2 @@
-pod "LVTwitterOAuthClient", :path => "../"
+pod "LVTwitterOAuthClient", :path => "../LVTwitterOAuthClient.podspec"
 
