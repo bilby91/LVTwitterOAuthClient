@@ -1,6 +1,6 @@
 ![LVTwitterOAuthClient logo](http://s3.amazonaws.com/loovin/assets/LVTwitterOAuthClient.png "LVTwitterOAuthClient") 
 
-[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)]() [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClient%2A) [![Cocoapods](https://cocoapod-badges.herokuapp.com/p/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClientw%2A)[![Build Status](https://travis-ci.org/loovin/LVTwitterOAuthClient.svg?branch=master)](https://travis-ci.org/loovin/LVTwitterOAuthClient)
+[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)]() [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClient%2A) [![Cocoapods](https://cocoapod-badges.herokuapp.com/p/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClientw%2A)[![Build Status](https://travis-ci.org/bilby91/LVTwitterOAuthClient.svg?branch=master)](https://travis-ci.org/bilby91/LVTwitterOAuthClient)
 
 **LVTwitterOAuthClient** is a super simple client for performing Twitter's reverse auth and retrieving user's access token, just that.
 
@@ -54,7 +54,7 @@ Thanks!
 
 ## License
 
-Copyright (c) 2013 Loovin  (http://loovin.com/) / hackers@loovin.com
+Copyright (c) 2014 Martín Fernández  (http://bilby91.com/) / me@bilby91.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
