@@ -13,8 +13,8 @@ Initialise an `LVTwitterOAuthClient` with this initialiser:
 For retrieving the tokens do this:
 
     [client requestTokensForAccount:twitterAccount completionBlock:^(NSDictionary *oAuthResponse, NSError *error) {  
-		NSString oAuthToken = [oAuthResponse objectForKey: kLVOAuthAccessTokenKey];  
-		NSString oAuthSecret = [oAuthResponse objectForKey: kLVOAuthTokenSecretKey];  
+		NSString *oAuthToken = [oAuthResponse objectForKey: kLVOAuthAccessTokenKey];  
+		NSString *oAuthSecret = [oAuthResponse objectForKey: kLVOAuthTokenSecretKey];  
 		// Start using twitter api :)   
 	}]; 
 
@@ -33,8 +33,8 @@ Source: [StackOverflow](http://stackoverflow.com/questions/13349187/strange-beha
             twitterAccount.accountType = twitterAccountType;
 
             [client requestTokensForAccount:twitterAccount completionBlock:^(NSDictionary *oAuthResponse, NSError *error) {
-					NSString oAuthToken = [oAuthResponse objectForKey: kLVOAuthAccessTokenKey];
-					NSString oAuthSecret = [oAuthResponse objectForKey: kLVOAuthTokenSecretKey];
+					NSString *oAuthToken = [oAuthResponse objectForKey: kLVOAuthAccessTokenKey];
+					NSString *oAuthSecret = [oAuthResponse objectForKey: kLVOAuthTokenSecretKey];
 					// Start using twitter api :) 
             }];
 		}
