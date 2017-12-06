@@ -1,6 +1,6 @@
 # LVTwitterOAuthClient
 [![Twitter](https://img.shields.io/badge/contact-@bilby91-green.svg)](http://twitter.com/bilby91)
-[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)]() [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClient%2A) [![Cocoapods](https://cocoapod-badges.herokuapp.com/p/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClientw%2A) [![Build Status](https://travis-ci.org/bilby91/LVTwitterOAuthClient.svg?branch=master)](https://travis-ci.org/bilby91/LVTwitterOAuthClient)
+[![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)]() [![CocoaPods](https://cocoapod-badges.herokuapp.com/v/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClient%2A) [![CocoaPods](https://cocoapod-badges.herokuapp.com/p/LVTwitterOAuthClient/badge.png)](http://beta.cocoapods.org/?q=name%LVTwitterOAuthClientw%2A) [![Build Status](https://travis-ci.org/bilby91/LVTwitterOAuthClient.svg?branch=master)](https://travis-ci.org/bilby91/LVTwitterOAuthClient)
 
 **LVTwitterOAuthClient** is a super simple client for performing Twitter's reverse auth and retrieving user's access token, just that.
 
